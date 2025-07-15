@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBank - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 50%;
+        }
+        h1 {
+            font-size: 42px;
+            color: #17a2b8;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .contact {
+            font-size: 16px;
+            color: #555;
+            margin-top: 20px;
+        }
+        .get-started-button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            color: white;
+            background: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .get-started-button:hover {
+            background: #218838;
+        }
+        .chatbot {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            width: 80%;
+        }
+        .chatbot select, .chatbot button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function showAnswer() {
+            let question = document.getElementById("question").value;
+            let answer = "";
+            if (question === "account") {
+                answer = "You can create an account by visiting our nearest branch or signing up online.";
+            } else if (question === "loan") {
+                answer = "We offer cash withdrawal, fast cash, pin change and balance equiery.";
+            } else if (question === "support") {
+                answer = "You can contact our support team at +91 1122334455 for assistance.";
+            }
+            document.getElementById("answer").innerText = answer;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>MyBank</h1>
+        <p>Welcome to MyBank, your trusted partner in financial services. We provide secure and reliable banking solutions to help you manage your money efficiently.</p>
+        <button class="get-started-button" onclick="window.location.href='account.html'"><a href="login.html"> Get Started</a></button>
+        <div class="contact">
+            <p><strong>Contact Us:</strong> +1 234 567 890</p>
+            <p><strong>Address:</strong>Bumkar Chowk/Wakad/Pune 411057</p>
+        </div>
+        <div class="chatbot">
+            <h2>AI Chatbot</h2>
+            <label for="question">Select a question:</label>
+            <select id="question">
+                <option value="account">How do I open an account?</option>
+                <option value="loan">What types services do you offer?</option>
+                <option value="support">How can I contact customer support?</option>
+            </select>
+            <button onclick="showAnswer()">Ask</button>
+            <p id="answer"></p>
+        </div>
+    </div>
+</body>
+</html>

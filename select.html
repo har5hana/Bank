@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        a{
+          text-decoration: none;
+          color: black;
+
+
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #004085;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .exit-button {
+            background-color: #dc3545;
+        }
+        .exit-button:hover {
+            background-color: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Banking Services</h2>
+        <div class="button-container">
+            <button><a href="cashwithdrawal.html">Cash Withdrawal</a></button>
+            <button><a href="fastcash.html">Fast Cash</a></button>
+            
+            <button><a href="pinchange.html">PIN Change</a></button>
+            <button><a href="balance.html"> Balance Enquiry</a></button>
+            <button class="exit-button"><a href="home.html"> Exit</a></button>
+        </div>
+    </div>
+</body>
+</html>
